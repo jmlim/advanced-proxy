@@ -1,7 +1,7 @@
 package com.example.advancedproxy;
 
-import com.example.advancedproxy.config.v3_proxyfactory.ProxyFactoryConfigV2;
-import com.example.advancedproxy.config.v4_postprocessor.BeanPostProcessorConfig;
+import com.example.advancedproxy.config.v5_autoproxy.AutoProxyConfig;
+import com.example.advancedproxy.config.v6_aop.AopConfig;
 import com.example.advancedproxy.trace.logtrace.LogTrace;
 import com.example.advancedproxy.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 
-@Import({BeanPostProcessorConfig.class})
+@Import({AopConfig.class})
+// @Import({BeanPostProcessorConfig.class})
 //@Import(ProxyFactoryConfigV2.class)
 // @Import(ProxyFactoryConfigV1.class)
 // @Import(DynamicProxyFilterConfig.class)
